@@ -214,7 +214,7 @@ ggplot(DF_all, aes(ymin = ymin, ymax = ymax, xmin = xmin,
 ----------------------------------
 
 # Script generalized into a function
-mosaicGG <- function(data, X, FILL) {
+ mosaicGG <- function(data, X, FILL) {
   
   # Proportions in raw data
   DF <- as.data.frame.matrix(table(data[[X]], data[[FILL]]))
