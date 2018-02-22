@@ -32,7 +32,7 @@ ggplot(adult, aes (x = SRAGE_P, fill= factor(RBMI))) +
 #Clean the data
 -------------------------
 # Remove individual aboves 84
-adult <- adult[adult$SRAGE_P <= 84,]
+adult <- adult[adult$SRAGE_P <= 84, ]
 
 # Remove individuals with a BMI below 16 and above or equal to 52
 adult <- adult[adult$BMI_P >= 16 & adult$BMI_P < 52, ]
@@ -214,7 +214,7 @@ ggplot(DF_all, aes(ymin = ymin, ymax = ymax, xmin = xmin,
 ----------------------------------
 
 # Script generalized into a function
- mosaicGG <- function(data, X, FILL) {
+mosaicGG <- function(data, X, FILL) {
   
   # Proportions in raw data
   DF <- as.data.frame.matrix(table(data[[X]], data[[FILL]]))
